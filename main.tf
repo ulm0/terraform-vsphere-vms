@@ -41,6 +41,6 @@ module "vms" {
   vm_cpus            = "${var.vm_cpus}"
   vm_disk_size       = "${local.vm_disk_size}"
   vm_mem             = "${var.vm_mem}"
-  vms                = "${var.masters}"
+  vms                = "${var.vms}"
   vs_vm_folder       = "${var.vs_vm_folder}"
 }

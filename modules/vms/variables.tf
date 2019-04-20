@@ -24,8 +24,6 @@ variable "time_zone" {}
 variable "vm_cpus" {}
 variable "vm_disk_size" {}
 variable "vm_mem" {}
-variable "vm_password" {}
-variable "vm_user" {}
 
 variable "vms" {
   type = "map"
