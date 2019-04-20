@@ -93,7 +93,6 @@ variable "vs_vm_folder" {
 }
 
 locals {
-  disk_size        = "${module.vsphere.template_disk_size}"
-  master_disk_size = "${var.master_disk_size != "" ? var.master_disk_size : local.disk_size}"
-  worker_disk_size = "${var.worker_disk_size != "" ? var.worker_disk_size : local.disk_size}"
+  disk_size    = "${module.vsphere.template_disk_size}"
+  vm_disk_size = "${var.vm_disk_size != "" ? var.vm_disk_size : local.disk_size}"
 }
