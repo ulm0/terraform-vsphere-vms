@@ -46,7 +46,7 @@ variable "vm_disk_size" {
 
 variable "vms" {
   description = "Key-value list containing VM names and IPs"
-  type        = "map"
+  type        = map(string)
 }
 
 # interpolation in source not supported yet
@@ -93,6 +93,7 @@ variable "vs_vm_folder" {
 }
 
 locals {
-  disk_size    = "${module.vsphere.template_disk_size}"
-  vm_disk_size = "${var.vm_disk_size != "" ? var.vm_disk_size : local.disk_size}"
+  disk_size    = module.vsphere.template_disk_size
+  vm_disk_size = var.vm_disk_size != "" ? var.vm_disk_size : local.disk_size
 }
+
