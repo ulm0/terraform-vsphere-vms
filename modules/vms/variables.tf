@@ -1,17 +1,9 @@
 variable "adapter_type" {}
-
-variable "dns_servers" {
-  type = "list"
-}
-
+variable "dns_servers" {type = list(string)}
 variable "domain" {}
 variable "ds_id" {}
 variable "guest_id" {}
-
-variable "hv_enabled" {
-  description = "Enable nested hardware virtualization"
-}
-
+variable "hv_enabled" {}
 variable "ip_gateway" {}
 variable "ip_netmask" {}
 variable "net_id" {}
@@ -24,9 +16,7 @@ variable "time_zone" {}
 variable "vm_cpus" {}
 variable "vm_disk_size" {}
 variable "vm_mem" {}
-
 variable "vms" {
-  type = "map"
+  type = map(string)
 }
-
 variable "vs_vm_folder" {}
