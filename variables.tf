@@ -10,6 +10,11 @@ variable "domain" {
   default     = "localdomain"
 }
 
+variable "enable_disk_uuid" {
+  description = "Enabled disk uuid for VMs"
+  default     = true
+}
+
 variable "hv_enabled" {
   description = "Enable nested hardware virtualization, required when using kata-containers"
   default     = false

@@ -1,6 +1,7 @@
 resource "vsphere_virtual_machine" "vms" {
   count               = length(keys(var.vms))
   datastore_id        = var.ds_id
+  enable_disk_uuid    = var.enable_disk_uuid
   folder              = var.vs_vm_folder
   guest_id            = var.guest_id
   latency_sensitivity = "normal"

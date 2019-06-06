@@ -27,6 +27,7 @@ module "vms" {
   dns_servers        = var.dns_servers
   domain             = var.domain
   ds_id              = module.vsphere.ds_id
+  enable_disk_uuid   = var.enable_disk_uuid
   guest_id           = module.vsphere.template_guest_id
   hv_enabled         = var.hv_enabled
   ip_gateway         = var.ip_gateway

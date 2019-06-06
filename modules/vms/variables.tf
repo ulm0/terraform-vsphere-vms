@@ -1,7 +1,8 @@
 variable "adapter_type" {}
-variable "dns_servers" {type = list(string)}
+variable "dns_servers" { type = list(string) }
 variable "domain" {}
 variable "ds_id" {}
+variable "enable_disk_uuid" {}
 variable "guest_id" {}
 variable "hv_enabled" {}
 variable "ip_gateway" {}
