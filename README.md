@@ -2,8 +2,21 @@
 
 Create vSphere VMs in bulk from VM template with terraform
 
-- Master branch contains module for terraform 0.12 and later (usage: `source = "git::https://gitlab.com/ulm0/vsphere-vms.git"`)
-- [0.11](https://gitlab.com/ulm0/vsphere-vms/tags/0.11): Module for terraform 0.11.x (usage: `source = "git::https://gitlab.com/ulm0/vsphere-vms.git?ref=0.11"`)
+- Master branch contains module for terraform 0.12 and later 
+    ```hcl
+    module "vms" {
+      source = "git::https://gitlab.com/bennuteam/vsphere-vms.git"
+
+      ...
+    }
+    ```
+- [0.11](https://gitlab.com/bennuteam/vsphere-vms/tags/0.11): Module for terraform 0.11.x
+    ```hcl
+    module "vms" {
+      source = "git::https://gitlab.com/bennuteam/vsphere-vms.git?ref=0.11"
+
+      ...
+    }
 
 ## Config options
 
