@@ -30,7 +30,7 @@ Create vSphere VMs in bulk from VM template with terraform
 | `ip_netmask` | Mask for the given network | Y | `24` |
 | `vm_cpus` | CPUs for VMs to be created | N | `1` |
 | `vm_mem` | Memory in MBs for VMs to be created | N | `2048` |
-| `vm_disk_size` | Disk size in GBs for VMs to be created | N | *Gets the disk size from template* |
+| `vm_disk_size` | Disk size in GBs for VMs to be created | N | *Gets disk size from template* |
 | `vms` | Key-value list containing VM names and IP addresses respectively| Y | `{}` |
 | `time_zone` | Timezone to be set in VMs | N | `UTC` |
 | `vm_template_name` | Template to use for VMs | Y | - |
