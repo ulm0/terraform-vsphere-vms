@@ -11,12 +11,12 @@ variable "domain" {
 }
 
 variable "enable_disk_uuid" {
-  description = "Enabled disk uuid for VMs"
+  description = "Enable disk uuid for VMs"
   default     = true
 }
 
 variable "hv_enabled" {
-  description = "Enable nested hardware virtualization, required when using kata-containers"
+  description = "Enable nested hardware virtualization"
   default     = false
 }
 
@@ -50,7 +50,7 @@ variable "vm_disk_size" {
 }
 
 variable "vms" {
-  description = "Key-value list containing VM names and IPs"
+  description = "Key-value list containing VM names and IP addresses respectively"
   type        = map(string)
 }
 
@@ -94,7 +94,7 @@ variable "vs_rp_name" {
 }
 
 variable "vs_vm_folder" {
-  description = "vSphere folder to place VMs in"
+  description = "Existing vSphere folder to place VMs in"
 }
 
 locals {
