@@ -1,3 +1,3 @@
 output "vms" {
-  value = modules.vms.vms
+  value = module.vms.vms
 }
