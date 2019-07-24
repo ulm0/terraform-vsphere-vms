@@ -1,19 +1,3 @@
-resource "vsphere_tag_category" "vms-category" {
-  name        = "terraform-vms"
-  cardinality = "SINGLE"
-  description = "VMs managed by Terraform"
-
-  associable_types = [
-    "VirtualMachine",
-  ]
-}
-
-resource "vsphere_tag" "vm-tag" {
-  name        = "terraform-vm"
-  category_id = vsphere_tag_category.vms-category.id
-  description = "VM managed by Terraform"
-}
-
 resource "vsphere_virtual_machine" "vms" {
   count               = length(keys(var.vms))
   datastore_id        = var.ds_id
