@@ -11,7 +11,6 @@ resource "vsphere_virtual_machine" "vms" {
   num_cpus            = var.vm_cpus
   resource_pool_id    = var.rp_id
   scsi_type           = var.template_scsi_type
-  tags                = [vsphere_tag.vm-tag.id]
 
   disk {
     eagerly_scrub    = var.template_disk_es
